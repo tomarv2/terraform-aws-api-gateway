@@ -3,8 +3,8 @@ module "route53" {
 
   deploy_route53 = var.deploy_route53
 
-  account_id       = data.aws_caller_identity.current.account_id
-  aws_region       = var.aws_region
+  account_id       = local.account_info
+  aws_region       = local.override_aws_region
   domain_name      = var.domain_name
   names            = var.names
   types_of_records = var.types_of_records

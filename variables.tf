@@ -8,9 +8,13 @@ variable "prjid" {
   type        = string
 }
 
+variable "account_id" {
+  description = "aws account id to deploy resources"
+  type        = string
+}
+
 variable "aws_region" {
-  description = "AWS region to deploy resources in"
-  default     = "us-west-2"
+  description = "aws region to deploy resources"
   type        = string
 }
 

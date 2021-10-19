@@ -7,11 +7,12 @@ locals {
     }
   )
 
+  account_info        = var.account_id != null ? var.account_id : data.aws_caller_identity.current.account_id
+  override_aws_region = var.aws_region != null ? var.aws_region : data.aws_region.current.name
+
   api_gateway_name = var.api_gateway_name != null ? var.api_gateway_name : "${var.teamid}-${var.prjid}"
   stage_name       = var.stage_name != null ? var.stage_name : "${var.teamid}-${var.prjid}"
 }
-
-data "aws_caller_identity" "current" {}
 
 data "aws_acm_certificate" "cert" {
   count = var.deploy_api_gateway ? 1 : 0
@@ -20,3 +21,8 @@ data "aws_acm_certificate" "cert" {
   statuses    = ["ISSUED"]
   most_recent = true
 }
+
+
+data "aws_region" "current" {}
+
+data "aws_caller_identity" "current" {}
