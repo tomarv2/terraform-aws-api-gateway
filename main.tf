@@ -52,7 +52,7 @@ resource "aws_api_gateway_integration" "request_method_integration" {
   rest_api_id = join("", aws_api_gateway_rest_api.api_gateway_rest_api.*.id)
   http_method = join("", aws_api_gateway_method.gateway_method.*.http_method)
   type        = var.integration_type
-  uri         = "arn:aws:apigateway:${var.aws_region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${var.aws_region}:${data.aws_caller_identity.current.account_id}:function:${var.function_name}/invocations"
+  uri         = "arn:aws:apigateway:${local.region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${local.region}:${local.account_id}:function:${var.function_name}/invocations"
   # AWS lambdas can only be invoked with the POST method
   integration_http_method = var.method
   request_templates = {
@@ -88,7 +88,7 @@ resource "aws_lambda_permission" "allow_api_gateway" {
   statement_id  = "${var.teamid}-${var.prjid}-AllowExecutionFromApiGateway"
   action        = "lambda:InvokeFunction"
   principal     = "apigateway.amazonaws.com"
-  source_arn    = "arn:aws:execute-api:${var.aws_region}:${data.aws_caller_identity.current.account_id}:${join("", aws_api_gateway_rest_api.api_gateway_rest_api.*.id)}/*/${var.method}${var.path}"
+  source_arn    = "arn:aws:execute-api:${local.region}:${local.account_id}:${join("", aws_api_gateway_rest_api.api_gateway_rest_api.*.id)}/*/${var.method}${var.path}"
 }
 
 resource "aws_api_gateway_deployment" "gateway_deployment" {

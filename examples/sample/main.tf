@@ -1,3 +1,12 @@
+terraform {
+  required_version = ">= 1.0.1"
+  required_providers {
+    aws = {
+      version = "~> 3.63"
+    }
+  }
+}
+
 provider "aws" {
   region  = "us-west-2"
   profile = "default"
@@ -7,9 +16,9 @@ provider "aws" {
 module "api_gateway" {
   source = "../../"
 
-  teamid        = var.teamid
-  prjid         = var.prjid
-  aws_region    = "us-west-2"
+  teamid = var.teamid
+  prjid  = var.prjid
+
   function_name = "rumse-demo"
   stage_name    = "dev"
   api_cname     = "cicd"

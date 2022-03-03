@@ -9,8 +9,6 @@
         <img src="https://img.shields.io/github/commit-activity/m/tomarv2/terraform-template" /></a>
     <a href="https://stackoverflow.com/users/6679867/tomarv2" alt="Stack Exchange reputation">
         <img src="https://img.shields.io/stackexchange/stackoverflow/r/6679867"></a>
-    <a href="https://discord.gg/XH975bzN" alt="chat on Discord">
-        <img src="https://img.shields.io/discord/813961944443912223?logo=discord"></a>
     <a href="https://twitter.com/intent/follow?screen_name=varuntomar2019" alt="follow on Twitter">
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
 </p>
@@ -104,7 +102,16 @@ module "api-gateway" {
 
 Please refer to examples directory [link](examples) for references.
 
+## Requirements
 
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.63 |
+
+## Providers
+
+| Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 3.61.0 |
 
@@ -112,8 +119,8 @@ Please refer to examples directory [link](examples) for references.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_cloudwatch"></a> [cloudwatch](#module\_cloudwatch) | git::git@github.com:tomarv2/terraform-aws-cloudwatch.git | v0.0.5 |
-| <a name="module_route53"></a> [route53](#module\_route53) | git@github.com:tomarv2/terraform-aws-route53.git | n/a |
+| <a name="module_cloudwatch"></a> [cloudwatch](#module\_cloudwatch) | git::git@github.com:tomarv2/terraform-aws-cloudwatch.git | v0.0.7 |
+| <a name="module_route53"></a> [route53](#module\_route53) | git@github.com:tomarv2/terraform-aws-route53.git | v0.0.10 |
 
 ## Resources
 
@@ -138,10 +145,8 @@ Please refer to examples directory [link](examples) for references.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_account_id"></a> [account\_id](#input\_account\_id) | aws account id to deploy resources | `string` | n/a | yes |
 | <a name="input_api_cname"></a> [api\_cname](#input\_api\_cname) | DNS Cname for API Gateway | `string` | n/a | yes |
 | <a name="input_api_gateway_name"></a> [api\_gateway\_name](#input\_api\_gateway\_name) | API gateway name | `string` | `null` | no |
-| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | aws region to deploy resources | `string` | n/a | yes |
 | <a name="input_cache_cluster_size"></a> [cache\_cluster\_size](#input\_cache\_cluster\_size) | Cache Cluster size | `string` | `"0.5"` | no |
 | <a name="input_cloudwatch_path"></a> [cloudwatch\_path](#input\_cloudwatch\_path) | Cloudwatch path | `string` | `null` | no |
 | <a name="input_deploy_api_gateway"></a> [deploy\_api\_gateway](#input\_deploy\_api\_gateway) | feature flag, true or false | `bool` | `true` | no |
@@ -155,10 +160,10 @@ Please refer to examples directory [link](examples) for references.
 | <a name="input_method"></a> [method](#input\_method) | API method | `string` | `"POST"` | no |
 | <a name="input_names"></a> [names](#input\_names) | The name of the record. | `list(any)` | n/a | yes |
 | <a name="input_path"></a> [path](#input\_path) | API path | `string` | `"/"` | no |
-| <a name="input_prjid"></a> [prjid](#input\_prjid) | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_stage_name"></a> [stage\_name](#input\_stage\_name) | Stage name | `string` | `null` | no |
 | <a name="input_status_code"></a> [status\_code](#input\_status\_code) | Status code | `string` | `"200"` | no |
-| <a name="input_teamid"></a> [teamid](#input\_teamid) | (Required) Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
+| <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_throttling_burst_limit"></a> [throttling\_burst\_limit](#input\_throttling\_burst\_limit) | Throttling burst limit | `string` | `"50"` | no |
 | <a name="input_throttling_rate_limit"></a> [throttling\_rate\_limit](#input\_throttling\_rate\_limit) | Throttling rate limit | `string` | `"100"` | no |
 | <a name="input_ttls"></a> [ttls](#input\_ttls) | (Required for non-alias records) The TTL of the record. | `list(any)` | <pre>[<br>  "3600"<br>]</pre> | no |

@@ -1,10 +1,8 @@
 module "route53" {
-  source = "git@github.com:tomarv2/terraform-aws-route53.git"
+  source = "git@github.com:tomarv2/terraform-aws-route53.git?ref=v0.0.10"
 
   deploy_route53 = var.deploy_route53
 
-  account_id       = local.account_info
-  aws_region       = local.override_aws_region
   domain_name      = var.domain_name
   names            = var.names
   types_of_records = var.types_of_records
