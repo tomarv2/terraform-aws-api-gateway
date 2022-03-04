@@ -149,9 +149,9 @@ Please refer to examples directory [link](examples) for references.
 | <a name="input_api_gateway_name"></a> [api\_gateway\_name](#input\_api\_gateway\_name) | API gateway name | `string` | `null` | no |
 | <a name="input_cache_cluster_size"></a> [cache\_cluster\_size](#input\_cache\_cluster\_size) | Cache Cluster size | `string` | `"0.5"` | no |
 | <a name="input_cloudwatch_path"></a> [cloudwatch\_path](#input\_cloudwatch\_path) | Cloudwatch path | `string` | `null` | no |
-| <a name="input_deploy_api_gateway"></a> [deploy\_api\_gateway](#input\_deploy\_api\_gateway) | feature flag, true or false | `bool` | `true` | no |
-| <a name="input_deploy_cloudwatch"></a> [deploy\_cloudwatch](#input\_deploy\_cloudwatch) | feature flag, true or false | `bool` | `true` | no |
-| <a name="input_deploy_route53"></a> [deploy\_route53](#input\_deploy\_route53) | feature flag, true or false | `bool` | `true` | no |
+| <a name="input_deploy_api_gateway"></a> [deploy\_api\_gateway](#input\_deploy\_api\_gateway) | Feature flag, true or false | `bool` | `true` | no |
+| <a name="input_deploy_cloudwatch"></a> [deploy\_cloudwatch](#input\_deploy\_cloudwatch) | Feature flag, true or false | `bool` | `true` | no |
+| <a name="input_deploy_route53"></a> [deploy\_route53](#input\_deploy\_route53) | Feature flag, true or false | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | API Gateway description | `string` | `null` | no |
 | <a name="input_disable_execute_api_endpoint"></a> [disable\_execute\_api\_endpoint](#input\_disable\_execute\_api\_endpoint) | Disable execute api endpoint | `string` | `false` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Domain Name | `string` | n/a | yes |

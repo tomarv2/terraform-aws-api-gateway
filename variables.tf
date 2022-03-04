@@ -115,17 +115,17 @@ variable "integration_type" {
 variable "deploy_route53" {
   type        = bool
   default     = true
-  description = "feature flag, true or false"
+  description = "Feature flag, true or false"
 }
 
 variable "deploy_cloudwatch" {
-  description = "feature flag, true or false"
+  description = "Feature flag, true or false"
   default     = true
   type        = bool
 }
 
 variable "deploy_api_gateway" {
-  description = "feature flag, true or false"
+  description = "Feature flag, true or false"
   default     = true
   type        = bool
 }
