@@ -8,7 +8,6 @@ variable "prjid" {
   type        = string
 }
 
-
 variable "function_name" {
   description = "Lambda"
   type        = string
