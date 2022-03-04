@@ -13,7 +13,7 @@
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
 </p>
 
-# Terraform module for AWS API Gateway
+# Terraform module to create AWS API Gateway
 
 ## Versions
 
