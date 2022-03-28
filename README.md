@@ -98,18 +98,19 @@ module "api-gateway" {
 
 Please refer to examples directory [link](examples) for references.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.63 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.74 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.61.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 3.74 |
 
 ## Modules
 
@@ -174,3 +175,4 @@ Please refer to examples directory [link](examples) for references.
 | <a name="output_api_gateway_name"></a> [api\_gateway\_name](#output\_api\_gateway\_name) | API Gateway name |
 | <a name="output_cloudwatch_log_group_arn"></a> [cloudwatch\_log\_group\_arn](#output\_cloudwatch\_log\_group\_arn) | Cloudwatch log group arn. |
 | <a name="output_cname"></a> [cname](#output\_cname) | API Gateway cname |
+<!-- END_TF_DOCS -->
